@@ -15,16 +15,20 @@
 </head>
 
 <body>
-	<header>
-		<h1 class="display-5 text-center">Lista de Afazeres (TodoList)</h1>
-	</header>
-	<section>
-		<?php $this->loadViewInTemplate($viewName, $viewData); ?>
-	</section>
-	<footer>
-		Sávio Gomes da Silva <br>
-		Todos os Direitos reservados
-	</footer>
+	<div class="container">
+		<header>
+			<h1 class="display-5 text-center">Lista de Afazeres (TodoList)</h1>
+		</header>
+		<section>
+			<?php $this->loadViewInTemplate($viewName, $viewData); ?>
+		</section>
+
+		<footer class="footer">
+
+			Sávio Gomes da Silva <br>
+			Todos os Direitos reservados
+		</footer>
+	</div>
 </body>
 
 </html>

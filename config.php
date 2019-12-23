@@ -3,7 +3,7 @@ require 'environment.php';
 
 $config = array();
 if (ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://localhost/ToDoList/");
+	define("BASE_URL", "http://localhost/Todo_List/");
 	$config['dbname'] = 'crudoo';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';

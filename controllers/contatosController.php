@@ -3,7 +3,8 @@ class contatosController extends controller
 {
 
 	public function index()
-	{ }
+	{
+	}
 
 	public function add()
 	{

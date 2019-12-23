@@ -13,19 +13,22 @@
 <!-- Depois de pronto colocar o botão para toldo List-->
 
 <body>
+
 	<button id="botoes" class="btn btn-dark"><a href="<?php echo BASE_URL; ?>contatos/add"> Adicionar Novo Usuário </a> </button> <br><br>
 
-
-	<table width="900" text="responsive" class="table table-hover">
-		<thead class="thead-dark ">
-			<tr>
-				<th scope="col"> Numero Cadastro</th>
-				<th scope="col"> Nome</th>
-				<th scope="col"> E-mail </th>
-				<th scope="col" text="justify"> Ações </th>
-				<th scope="col"> Anotações </th>
-			</tr>
-		</thead>
+	<div class="container">
+		<table width="900" text="responsive" class="table table-hover">
+			<thead class="thead-dark ">
+				<tr>
+					<th scope="col-md-12"> Numero Cadastro</th>
+					<th scope="col"> Nome</th>
+					<th scope="col"> E-mail </th>
+					<th scope="col" text="justify"> Ações </th>
+					<th scope="col"> Anotações </th>
+				</tr>
+			</thead>
+	</div>
+	<div class="container">
 		<?php foreach ($lista as $item) : ?>
 			<tr>
 				<td><?php echo $item['id']; ?></td>
@@ -38,7 +41,8 @@
 				<td>
 					<button id="botoes" class="btn btn-dark"><a href="views/anotacoes.php"> Anotações</a> </button> <br><br>
 			</tr> <?php endforeach; ?>
-	</table>
+		</table>
+	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
