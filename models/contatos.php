@@ -35,10 +35,11 @@ class Contatos extends model
 	public function add($nome, $email)
 	{
 		if ($this->emailExists($email) == false) {
-			$sql = "INSERT INTO contatos (nome, email) VALUES (:nome, :email)";
+			$sql = "INSERT INTO contatos (nome, email,senha) VALUES (:nome, :email, :senha)";
 			$sql = $this->db->prepare($sql);
 			$sql->bindValue(':nome', $nome);
 			$sql->bindValue(':email', $email);
+			$sql->bindValue(':senha', $email);
 			$sql->execute();
 
 			return true;
