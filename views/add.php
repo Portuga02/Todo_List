@@ -19,28 +19,31 @@
 	<?php endif; ?>
 
 	<div class="container">
+		<div class="col col-xs-12">
 
-		<form method="POST" action="<?php echo BASE_URL; ?>contatos/add_save">
+			<form method="POST" action="<?php echo BASE_URL; ?>contatos/add_save">
 
-			<div class="form-group">
-				<div class="row">
-					<label>Nome *</label>
-					<input class="form-control" placeholder="Nome Completo" name="nome" required>
+				<div class="form-group">
+					<div class="row">
+						<label>Nome *</label>
+						<input class="form-control" placeholder="Nome Completo" name="nome" required>
+					</div>
+
+					<div class="col-xs-12">
+						<div class="row">
+							<label>Email *</label>
+							<input class="form-control" type="email" name="email" maxlength="35" placeholder="Email">
+						</div>
+					</div>
+
+
+					<button class="btn btn-dark" id="botoes" type="submit" value="Adicionar"> ADICIONAR</button>
 				</div>
-			</div>
-
-			<div class="form-group">
-				<div class="row">
-					<label>Email *</label>
-					<input class="form-control" type="email" name="email" maxlength="35" placeholder="Email">
-				</div>
-			</div>
-			<div class="container">
-				<button class="btn btn-dark" id="botoes" type="submit" value="Adicionar"> ADICIONAR</button>
-			</div>
 
 
-		</form>
+			</form>
+		</div>
+	</div>
 	</div>
 </body>
 
