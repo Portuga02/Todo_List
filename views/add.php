@@ -12,18 +12,20 @@
 </head>
 
 <body>
-	<h3 class="display-2 text-center">Adicionar</h3>
-
-	<?php if ($error == 'exist') : /*Função verificadora caso exista um email já cadastrado em banco */ ?>
-		<div class="alert alert-danger">Ops!! E-mail já está cadastrado em nosso sistema,Por favor cadastre um Email diferente.</div>
-	<?php endif; ?>
-
 	<div class="container">
+
+		<h4 class="display-2 text-center">Adicionar</h4>
+
+		<?php if ($error == 'exist') : /*Função verificadora caso exista um email já cadastrado em banco */ ?>
+			<div class="alert alert-danger">Ops!! E-mail já está cadastrado em nosso sistema,Por favor cadastre um Email diferente.</div>
+		<?php endif; ?>
+
+
 		<div class="col col-xs-12">
 
-			<form method="POST" action="<?php echo BASE_URL; ?>contatos/add_save">
+			<form class="form-group"method="POST" action="<?php echo BASE_URL; ?>contatos/add_save">
 
-				<div class="form-group">
+				<div >
 					<div class="row">
 						<label>Nome *</label>
 						<input class="form-control" placeholder="Nome Completo" name="nome" required>
@@ -35,16 +37,17 @@
 							<input class="form-control" type="email" name="email" maxlength="35" placeholder="Email">
 						</div>
 					</div>
-
-
-					<button class="btn btn-dark" id="botoes" type="submit" value="Adicionar"> ADICIONAR</button>
-				</div>
-
-
+					<div class="col-xs-12">
+						<button class="btn btn-dark" id="botoes" value="Adicionar"> ADICIONAR</button>
+					</div>
 			</form>
+
 		</div>
 	</div>
-	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

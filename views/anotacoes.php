@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <title>Lista de Afazeres</title>
@@ -33,4 +33,5 @@
     </div>
     <script type="text/javascript" src="../assets/js/configTodo.js"></script>
 </body>
+
 </html>
