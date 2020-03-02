@@ -7,22 +7,22 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-	<title>Lista de Afazeres (TodoList)</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_adicionar.css" />
+	<title> (TodoList)</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/config.css" />
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
 </head>
 
 <body>
 	<div class="card text-center">
 		<div class="card-header">
-			<h1 class="display-5 text-center">Lista de Afazeres (TodoList)</h1>
+			<h1 class="display-5 text-center"> Todo List</h1>
 		</div>
 	</div>
 	<section>
 		<?php $this->loadViewInTemplate($viewName, $viewData); ?>
 	</section>
 
-	<div class="card text-center">
+	<div class="card text-center" id="Footer">
 		<div class="card-header">
 
 			Sávio Gomes da Silva

@@ -8,7 +8,7 @@
 	<title>Todo List</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="../assets/css/style_index.css">
+	<link rel="stylesheet" href="../assets/css/config.css">
 </head>
 
 <body>
@@ -38,9 +38,10 @@
 				</div>
 
 				<div class="col-xs-12">
-					<button class="btn btn-dark" id="botoes" value="Adicionar"> ADICIONAR</button>
+					<button id="botoesBaixo" class="btn btn-dark" id="botoes" value="Adicionar"> ADICIONAR</button>
 				</div>
 			</form>
+			<br>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

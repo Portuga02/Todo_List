@@ -1,16 +1,27 @@
-#botoes{
+#botoes {
     margin-top: 20px;
-   
     line-height: 40px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 3px;
 }
-body{
+
+body {
     font-size: 13px;
-   
-    
 }
-table{
+
+table {
     font-size: 14px;
+}
+
+#botoesBaixo {
+    margin-top: 20px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+}
+
+#footer {
+    margin-top: 20px;
 }

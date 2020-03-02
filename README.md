@@ -13,18 +13,19 @@ e a IDE Visual Studio Code da Microsoft
 passo a passo 
 
 
-1 º baixar os aplicativos caso não tenha (Xampp e Vs Code)
+1 º baixar os aplicativos caso não tenha (Xampp wampp ou lampp e Vs Code)
 
 2º  baixar o respositório diretamente do git
 
 3º  extrair o repositório
 
-4º  importar o banco de dados para o phpmyadmin 
+3.1 º or em config.php e escolher o tipo de conexão com o banco de dados 
+
+4º  importar o banco de dados para o phpmyadmin ou para pgadmin
 
 OBS.: O mesmo encontra-se zipado dentro da pasta DB dentro do sistema
 
 5º colocar o projeto dentro da pasta Htdocs
-
 
 6º abrir em seu navegador
 
