@@ -13,7 +13,7 @@
 <body>
     <div class="card">
         <div class="card-body">
-            <h1>Ops!!!! Página não encontrada</h1>
+            <h1>Ops!!!! Página não encontrada tente novamente</h1>
         </div>
     </div>
 </body>

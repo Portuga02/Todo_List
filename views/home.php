@@ -6,14 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/style_index.css">
+	<link rel="stylesheet" href="assets/css/config.css">
 	<title>Lista de Afazeres</title>
 </head>
 <!-- Depois de pronto colocar o botão para toldo List-->
 
-<body style="background-color:	#87CEEB;">
-	<div class="container">
-		<button id="botoes" class="btn btn-dark"><a href="<?php echo BASE_URL; ?>contatos/add"> Adicionar Novo Usuário </a> </button> <br><br>
+<body ">
+	<div class=" container">
+	<button id="botoes" class="btn btn-dark"><a href="<?php echo BASE_URL; ?>contatos/add"> Adicionar Novo Usuário </a> </button> <br><br>
 	</div>
 	<div class="container">
 		<table text="responsive" class="table table-bordered">

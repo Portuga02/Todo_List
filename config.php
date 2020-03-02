@@ -16,10 +16,18 @@ if (ENVIRONMENT == 'development') {
 	$config['dbpass'] = '';
 }
 
-global $db;
+global $db; 
 try {
 	$db = new PDO("mysql:dbname=" . $config['dbname'] . ";host=" . $config['host'], $config['dbuser'], $config['dbpass']);
 } catch (PDOException $e) {
 	echo "ERRO: " . $e->getMessage();
 	exit;
 }
+
+/*PARA CONEXÕES COM O BANCO DE DADOS POSTGRES SQL*/
+// try {
+// 	$db = new PDO("postgres:dbname=" . $config['dbname'] . ";host=" . $config['host'], $config['dbuser'], $config['dbpass']);
+// } catch (PDOException $e) {
+// 	echo "ERRO: " . $e->getMessage();
+// 	exit;
+// }

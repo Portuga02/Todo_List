@@ -23,25 +23,24 @@
 
 		<div class="col col-xs-12">
 
-			<form class="form-group"method="POST" action="<?php echo BASE_URL; ?>contatos/add_save">
+			<form method="POST" action="<?php echo BASE_URL; ?>contatos/add_save">
 
-				<div >
-					<div class="row">
-						<label>Nome *</label>
-						<input class="form-control" placeholder="Nome Completo" name="nome" required>
-					</div>
 
-					<div class="col-xs-12">
-						<div class="row">
-							<label>Email *</label>
-							<input class="form-control" type="email" name="email" maxlength="35" placeholder="Email">
-						</div>
-					</div>
-					<div class="col-xs-12">
-						<button class="btn btn-dark" id="botoes" value="Adicionar"> ADICIONAR</button>
-					</div>
+				<div class="form-group">
+					<label for="exampleInputName1">Nome *</label>
+					<input class="form-control" placeholder="Nome Completo" name="nome" required>
+				</div>
+
+
+				<div class="form-group">
+					<label for="exampleInputEmail1">Email *</label>
+					<input class="form-control" type="email" name="email" maxlength="35" placeholder="E-mail">
+				</div>
+
+				<div class="col-xs-12">
+					<button class="btn btn-dark" id="botoes" value="Adicionar"> ADICIONAR</button>
+				</div>
 			</form>
-
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

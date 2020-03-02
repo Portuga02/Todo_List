@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<title>Lista de Afazeres (TodoList)</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_adicionar.css" />
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
 </head>
 
