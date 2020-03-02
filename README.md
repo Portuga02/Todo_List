@@ -19,7 +19,7 @@ passo a passo
 
 3º  extrair o repositório
 
-3.1 º or em config.php e escolher o tipo de conexão com o banco de dados 
+3.1 º ir em config.php e escolher o tipo de conexão com o banco de dados 
 
 4º  importar o banco de dados para o phpmyadmin ou para pgadmin
 
