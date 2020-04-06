@@ -21,9 +21,9 @@ class contatosController extends controller
 
 	public function add_save()
 	{
-		if (!empty($_POST['email'])) {
-			$nome = $_POST['nome'];
-			$email = $_POST['email'];
+		if (!empty(addslashes($_POST['email']))) {
+			$nome = addslashes($_POST['nome']);
+			$email = addslashes($_POST['email']);
 
 			$contatos = new Contatos();
 			if ($contatos->add($nome, $email)) {
@@ -46,7 +46,7 @@ class contatosController extends controller
 		if (!empty($id)) {
 			$contatos = new Contatos();
 
-			if (!empty($_POST['nome'])) {
+			if (!empty(addslashes($_POST['nome']))) {
 				$nome = $_POST['nome'];
 
 				$contatos->edit($nome, $id);
