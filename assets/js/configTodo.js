@@ -1,5 +1,5 @@
-window.onload = function() {
-    //variables
+window.onload = function () {
+    //configuração de variaveis
     var form = document.getElementById("form");
     var input = document.getElementById("input");
     var btn = document.getElementById("btn");
@@ -41,9 +41,9 @@ window.onload = function() {
                 btnClr.style.display = "inline";
             }
             var text = input.value;
-            var item = `<li id="li-${id}">${text}<input id="box-${id}" 			class="checkboxes" type="checkbox"></li>`;
+            var item = `<li id="li-${id}">${text}<input id="box-${id}"class="checkboxes" type="checkbox"></li>`;
             list.insertAdjacentHTML('beforeend', item);
-            liItem = { item: text, checked: false };
+            liItem = {item: text, checked: false};
             todoList.push(liItem);
             id++;
             addToLocalStorage()
@@ -64,7 +64,7 @@ window.onload = function() {
 
     //adicionando dados ao armazenamento local
     function addToLocalStorage() {
-        if (typeof(Storage) !== "undefined") {
+        if (typeof (Storage) !== "undefined") {
             localStorage.setItem("todoList", JSON.stringify(todoList));
         } else {
             alert("ops! Seu navegador não suporta armazenamento local");
@@ -75,7 +75,7 @@ window.onload = function() {
     function displayList() {
         list.style.borderTop = "2px solid white";
         todoList = JSON.parse(localStorage.getItem("todoList"));
-        todoList.forEach(function(element) {
+        todoList.forEach(function (element) {
             console.log(element.item)
             var text = element.item;
             var item = `<li id="li-${id}">${text}<input id="box-${id}" class="checkboxes" type="checkbox"></li>`;
