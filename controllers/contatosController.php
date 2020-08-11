@@ -1,75 +1,72 @@
 <?php
-class contatosController extends controller
-{
 
-	public function index()
-	{
-	}
+class contatosController extends controller {
 
-	public function add()
-	{
-		$dados = array(
-			'error' => ''
-		);
+    public function index() {
+        
+    }
 
-		if (!empty($_GET['error'])) {
-			$dados['error'] = $_GET['error'];
-		}
+    public function add() {
+        $dados = array(
+            'error' => ''
+        );
 
-		$this->loadTemplate('add', $dados);
-	}
+        if (!empty($_GET['error'])) {
+            $dados['error'] = $_GET['error'];
+        }
 
-	public function add_save()
-	{
-		if (!empty(addslashes($_POST['email']))) {
-			$nome = addslashes($_POST['nome']);
-			$email = addslashes($_POST['email']);
+        $this->loadTemplate('add', $dados);
+    }
 
-			$contatos = new Contatos();
-			if ($contatos->add($nome, $email)) {
-				header("Location: " . BASE_URL);
-			} else {
-				header("Location: " . BASE_URL . 'contatos/add?error=exist');
-			}
-		} else {
-			header("Location: " . BASE_URL . 'contatos/add');
-		}
-	}
+    public function add_save() {
+        if (!empty(addslashes($_POST['email']))) {
+            $nome = addslashes($_POST['nome']);
+            $email = addslashes($_POST['email']);
 
-	public function edit($id)
-	{
-		// 1º passo: pegar as informações do contato pelo ID
-		// 2º passo: carregar o formulário, preenchido.
-		// 3º passo: receber os dados do form e editar.
-		$dados = array();
+            $contatos = new Contatos();
+            if ($contatos->add($nome, $email)) {
+                header("Location: " . BASE_URL);
+            } else {
+                header("Location: " . BASE_URL . 'contatos/add?error=exist');
+            }
+        } else {
+            header("Location: " . BASE_URL . 'contatos/add');
+        }
+    }
 
-		if (!empty($id)) {
-			$contatos = new Contatos();
+    public function edit($id) {
+        // 1º passo: pegar as informações do contato pelo ID
+        // 2º passo: carregar o formulário, preenchido.
+        // 3º passo: receber os dados do form e editar.
+        $dados = array();
 
-			if (!empty(addslashes($_POST['nome']))) {
-				$nome = $_POST['nome'];
+        if (!empty($id)) {
+            $contatos = new Contatos();
 
-				$contatos->edit($nome, $id);
-			} else {
-				$dados['info'] = $contatos->get($id);
+            if (!empty(addslashes($_POST['nome']))) {
+                $nome = $_POST['nome'];
 
-				if (isset($dados['info']['id'])) {
-					$this->loadTemplate('edit', $dados);
-					exit;
-				}
-			}
-		}
+                $contatos->edit($nome, $id);
+            } else {
+                $dados['info'] = $contatos->get($id);
 
-		header("Location: " . BASE_URL);
-	}
+                if (isset($dados['info']['id'])) {
+                    $this->loadTemplate('edit', $dados);
+                    exit;
+                }
+            }
+        }
 
-	public function del($id)
-	{
-		if (!empty($id)) {
-			$contatos = new Contatos();
-			$contatos->delete($id);
-		}
+        header("Location: " . BASE_URL);
+    }
 
-		header("Location: " . BASE_URL);
-	}
+    public function del($id) {
+        if (!empty($id)) {
+            $contatos = new Contatos();
+            $contatos->delete($id);
+        }
+
+        header("Location: " . BASE_URL);
+    }
+
 }

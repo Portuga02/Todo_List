@@ -1,8 +1,8 @@
 <?php
-class Login extends controller
-{
-    public function index()
-    {
+
+class Login extends controller {
+
+    public function index() {
         $dados = array();
 
         $contatos = new Contatos();
@@ -11,4 +11,5 @@ class Login extends controller
 
         $this->loadView('login', $dados);
     }
+
 }

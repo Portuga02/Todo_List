@@ -1,14 +1,14 @@
 <?php
-class homeController extends controller
-{
 
-	public function index()
-	{
-		$dados = array();
+class homeController extends controller {
 
-		$contatos = new Contatos();
-		$dados['lista'] = $contatos->getAll();
+    public function index() {
+        $dados = array();
 
-		$this->loadTemplate('home', $dados);
-	}
+        $contatos = new Contatos();
+        $dados['lista'] = $contatos->getAll();
+
+        $this->loadTemplate('home', $dados);
+    }
+
 }

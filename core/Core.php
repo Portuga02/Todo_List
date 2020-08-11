@@ -1,46 +1,46 @@
 <?php
-class Core
-{
 
-	public function run()
-	{
+class Core {
 
-		$url = '/';
-		if (isset($_GET['url'])) {
-			$url .= $_GET['url'];
-		}
+    public function run() {
 
-		$params = array();
+        $url = '/';
+        if (isset($_GET['url'])) {
+            $url .= $_GET['url'];
+        }
 
-		if (!empty($url) && $url != '/') {
-			$url = explode('/', $url);
-			array_shift($url);
+        $params = array();
 
-			$currentController = $url[0] . 'Controller';
-			array_shift($url);
+        if (!empty($url) && $url != '/') {
+            $url = explode('/', $url);
+            array_shift($url);
 
-			if (isset($url[0]) && !empty($url[0])) {
-				$currentAction = $url[0];
-				array_shift($url);
-			} else {
-				$currentAction = 'index';
-			}
+            $currentController = $url[0] . 'Controller';
+            array_shift($url);
 
-			if (count($url) > 0) {
-				$params = $url;
-			}
-		} else {
-			$currentController = 'homeController';
-			$currentAction = 'index';
-		}
+            if (isset($url[0]) && !empty($url[0])) {
+                $currentAction = $url[0];
+                array_shift($url);
+            } else {
+                $currentAction = 'index';
+            }
 
-		if (!file_exists('controllers/' . $currentController . '.php') || !method_exists($currentController, $currentAction)) {
-			$currentController = 'notfoundController';
-			$currentAction = 'index';
-		}
+            if (count($url) > 0) {
+                $params = $url;
+            }
+        } else {
+            $currentController = 'homeController';
+            $currentAction = 'index';
+        }
 
-		$c = new $currentController();
+        if (!file_exists('controllers/' . $currentController . '.php') || !method_exists($currentController, $currentAction)) {
+            $currentController = 'notfoundController';
+            $currentAction = 'index';
+        }
 
-		call_user_func_array(array($c, $currentAction), $params);
-	}
+        $c = new $currentController();
+
+        call_user_func_array(array($c, $currentAction), $params);
+    }
+
 }
